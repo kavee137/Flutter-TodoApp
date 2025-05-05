@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/code.iml" filepath="$PROJECT_DIR$/.idea/code.iml" />
       <module fileurl="file://$PROJECT_DIR$/todoapp_frontend/todoapp_frontend.iml" filepath="$PROJECT_DIR$/todoapp_frontend/todoapp_frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todoapp_frontend/android/todoapp_frontend_android.iml" filepath="$PROJECT_DIR$/todoapp_frontend/android/todoapp_frontend_android.iml" />
     </modules>
   </component>
 </project>
