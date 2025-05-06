@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:todoapp_frontend/features/authentication/ui/loginScreen.dart';
 import 'package:todoapp_frontend/features/authentication/ui/signUpScreen.dart';
@@ -7,9 +8,13 @@ import 'package:todoapp_frontend/features/todo/ui/edit_todo.dart';
 import 'package:todoapp_frontend/features/todo/ui/notification_screen.dart';
 import 'package:todoapp_frontend/features/todo/ui/view_todo.dart';
 import 'package:todoapp_frontend/splash_screen.dart';
+
+import 'firebase_options.dart';
 // import 'package:todoapp_frontend/signUpScreen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -40,7 +45,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
