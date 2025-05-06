@@ -3,6 +3,9 @@ import 'package:todoapp_frontend/features/authentication/ui/loginScreen.dart';
 import 'package:todoapp_frontend/features/authentication/ui/signUpScreen.dart';
 import 'package:todoapp_frontend/features/home/ui/home_page.dart';
 import 'package:todoapp_frontend/features/todo/ui/add_todo.dart';
+import 'package:todoapp_frontend/features/todo/ui/edit_todo.dart';
+import 'package:todoapp_frontend/features/todo/ui/notification_screen.dart';
+import 'package:todoapp_frontend/features/todo/ui/view_todo.dart';
 import 'package:todoapp_frontend/splash_screen.dart';
 // import 'package:todoapp_frontend/signUpScreen.dart';
 
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AddTodo(),
+      home: HomePage(),
     );
   }
 }

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:todoapp_frontend/contants/colors.dart';
+import 'package:todoapp_frontend/widgets/custom_todo_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -176,48 +177,9 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           height: 10,
                         ),
-                        Container(
-                          width: screenWidth,
-                          height: 70,
-                          // color: Colors.white,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: AppColor.accentColor.withOpacity(0.5)
-                            ),
-                            color: Colors.white
-                          ),
-
-                          child: Row(
-                            children: [
-                              Radio(value: 0, groupValue: 0, onChanged: (value) {}),
-                              Text(
-                                'Work Out',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: "Poppins",
-                                  color: AppColor.fontcolorBlack
-                                ),
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  Spacer(),
-                                  Icon(Icons.edit),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Icon(Icons.delete, color: Colors.red,),
-                                  Spacer(),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                            ],
-                          ),
-                        ),
+                        CustomTodoCard(cardTitle: "Work Out", isTaskCompleted: true),
+                        CustomTodoCard(cardTitle: "Gedara", isTaskCompleted: false),
+                        CustomTodoCard(cardTitle: "Work", isTaskCompleted: false),
                       ],
                     ),
                   ),

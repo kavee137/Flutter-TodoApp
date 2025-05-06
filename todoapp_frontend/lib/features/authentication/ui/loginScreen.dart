@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:todoapp_frontend/contants/colors.dart';
 
+import '../../../widgets/custom_button.dart';
+import '../../../widgets/custom_textfield.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -24,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       backgroundColor: AppColor.loginBGColor,
-
       body: SafeArea(
         child: Container(
           child: Column(
@@ -46,7 +48,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     horizontal: 30,
                     vertical: 50,
                   ),
-
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -54,10 +55,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       topRight: Radius.circular(40),
                     ),
                   ),
-
-                  // color: Colors.blue,
-
-
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -102,81 +99,27 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 30,
                       ),
-                      TextField(
+                      CustomTextfield(
                         controller: _emailController,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(
-                              color: AppColor.textFieldBorderColor,
-                            )
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(
-                              color: AppColor.textFieldBorderColor,
-                              width: 2,
-                            )
-                          ),
-                          labelText: 'Email',
-                          labelStyle: TextStyle(
-                            color: Color.fromARGB(255, 143, 148, 154),
-                            fontFamily: 'Poppins',
-                          ),
-                        ),
+                        labelText: "Email",
+                        borderColor: AppColor.textFieldBorderColor,
                       ),
                       SizedBox(
                         height: 30,
                       ),
-                      TextField(
+                      CustomTextfield(
                         controller: _passwordController,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(
-                                color: AppColor.textFieldBorderColor,
-                              )
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(
-                                color: AppColor.textFieldBorderColor,
-                                width: 2,
-                              )
-                          ),
-                          labelText: 'Password',
-                          labelStyle: TextStyle(
-                            color: Color.fromARGB(255, 143, 148, 154),
-                            fontFamily: 'Poppins',
-                          ),
-                        ),
+                        labelText: "Password",
+                        borderColor: AppColor.textFieldBorderColor,
                       ),
                       SizedBox(
                         height: 30,
                       ),
-                      Container(
-                        width: screenWidth,
-                        height: 55,
-                        decoration: BoxDecoration(
-                          color: AppColor.accentColor,
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                        child: Center(
-                          child: Text('Login',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w600
-                            )
-                          ),
-                        ),
-                      ),
+                      CustomButton(btnText: "Login", btnWidth: screenWidth),
                       SizedBox(
                         height: 30,
                       ),
                       Row(
-
                         children: [
                           Text('Don\'t have an account?',
                               style: TextStyle(
@@ -199,7 +142,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ]
           ),
         ),
-
       ),
     );
   }

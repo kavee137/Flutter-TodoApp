@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:todoapp_frontend/contants/colors.dart';
+import 'package:todoapp_frontend/widgets/custom_button.dart';
+import 'package:todoapp_frontend/widgets/custom_textfield.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -65,115 +67,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         SizedBox(
                             height: 25
                         ),
-                        TextField(
+                        CustomTextfield(
                           controller: _nameController,
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-                                  width: 2
-                              ),
-                            ),
-                            label: Text('Name',
-                                style: TextStyle(
-                                  color: AppColor.labelTextColor,
-                                  fontFamily: "Poppins",
-                                )
-                            )
-                          ),
+                          labelText: "Name",
+                          borderColor: Colors.white,
                         ),
                         SizedBox(
                             height: 15
                         ),
-                        TextField(
+                        CustomTextfield(
                           controller: _emailController,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                borderSide: BorderSide(
-                                  color: Colors.white,
-
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                borderSide: BorderSide(
-                                    color: Colors.white,
-                                    width: 2
-                                ),
-                              ),
-                              label: Text('Email',
-                                  style: TextStyle(
-                                    color: AppColor.labelTextColor,
-                                    fontFamily: "Poppins",
-                                  )
-                              )
-                          ),
-                        ),
+                          labelText: "Email",
+                          borderColor: Colors.white,),
                         SizedBox(
                             height: 15
                         ),
-                        TextField(
+                        CustomTextfield(
                           controller: _passwordController,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                borderSide: BorderSide(
-                                  color: Colors.white,
-
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                borderSide: BorderSide(
-                                    color: Colors.white,
-                                    width: 2
-                                ),
-                              ),
-                              label: Text('Password',
-                                  style: TextStyle(
-                                    color: AppColor.labelTextColor,
-                                    fontFamily: "Poppins",
-                                  )
-                              )
-                          ),
+                          labelText: "Password",
+                          borderColor: Colors.white,
                         ),
                         SizedBox(
                             height: 15
                         ),
-                        Container(
-                          width: screenWidth,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: AppColor.accentColor,
-                            borderRadius: BorderRadius.all(Radius.circular(80)),
-                          ),
-                          child: Center(
-                            child:Text(
-                                'Sign Up',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16,
-                                )
-                            )
-                          )
-                        ),
+                        CustomButton(btnText: "Sign Up", btnWidth: screenWidth),
                         SizedBox(
                             height: 15
                         ),
