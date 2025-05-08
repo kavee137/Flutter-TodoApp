@@ -15,6 +15,7 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  print("✅ Firebase connected: ${Firebase.app().name}");
   runApp(const MyApp());
 }
 
